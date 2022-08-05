@@ -6,8 +6,15 @@
 <p>Texto con pipe: <strong>{{ nombre | titlecase }}</strong></p>
 <p>Texto original: <strong>{{ nombre }}</strong></p>
 
-<p>Número {{ valor | number }}</p>
+<p [style]="{'color': 'red', 'font-size': '50px'}">Número {{ valor | number }}</p>
 <p>{{ obj | json }}</p>
 
-<button type="button" (click)="mostrarNombre()" pButton label="Cambiar nombre" aria-label="Cambiar nombre"
-    class="p-button-outlined"></button>
+<button type="button" (click)="mostrarNombre()" pButton label="Cambiar nombre" icon="pi pi-refresh" iconPos="right"
+    aria-label="Cambiar nombre" class="p-button-outlined p-button-help"></button>
+
+<p-card [header]="nombre | titlecase" subheader="Bachiller en Ing. de Sistemas e Informática"
+    [style]="{'width': '25rem', 'margin-bottom': '2em', 'border': '1px solid white', 'margin-top': '5px'}">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam
+    deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque
+    quas!
+</p-card>
