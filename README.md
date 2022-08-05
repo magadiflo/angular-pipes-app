@@ -7,5 +7,5 @@ El proyecto fue subido al servicio de netlify: https://app.netlify.com/teams/mag
 Para ver el proyecto ejecutándose, ir a esta dirección (2021): https://vibrant-ardinghelli-504f4e.netlify.app
 
 ## [PrimeNG](https://primefaces.org/primeng/setup)
-+ primeicons@5.0.0
-+ primeng@14.0.0
+"primeicons": "5.0.0"
+"primeng": "13.0.4"
