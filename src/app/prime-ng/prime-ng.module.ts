@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 //* PrimeNg
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
+import { MenubarModule } from 'primeng/menubar';
 /**
  ** Este módulo (que agrupa los elementos de PrimeNg)
  ** únicamente lo usaremos para exportar los módulos de PrimeNg. 
@@ -18,6 +19,7 @@ import { CardModule } from 'primeng/card';
   exports: [
     ButtonModule,
     CardModule,
+    MenubarModule,
   ]
 })
 export class PrimeNgModule { }
