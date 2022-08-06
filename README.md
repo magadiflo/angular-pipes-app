@@ -9,3 +9,6 @@ Para ver el proyecto ejecutándose, ir a esta dirección (2021): https://vibrant
 ## [PrimeNG](https://primefaces.org/primeng/setup)
 "primeicons": "5.0.0"
 "primeng": "13.0.4"
+
+## [PrimeFlex](https://www.primefaces.org/primeflex/setup)
+"primeflex": "^3.2.1"
