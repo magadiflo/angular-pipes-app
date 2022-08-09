@@ -26,10 +26,16 @@
             <ul>
                 <li>Fecha</li>
                 <li>Fecha | date (default 'mediumDate' -- equivalent to --> 'MMM d, y')</li>
-                <li>Fecha | date: 'short'</li>
-                <li>Fecha | date: 'long'</li>
-                <li>Fecha | date: 'dd-MM-yyyy'</li>
-                <li>Fecha | date: 'MMMM dd, yyyy'</li>
+                <li>Fecha | date:'short'</li>
+                <li>Fecha | date:'long'</li>
+                <li>Fecha | date:'dd-MM-yyyy'</li>
+                <li>Fecha | date:'MMMM dd, yyyy'</li>
+            </ul>
+
+            <hr>
+            <ul>
+                <li>fecha | date:'long':'GMT-6'</li>
+                <li>fecha | date:'long':'GMT-4'</li>
             </ul>
         </p-card>
     </div>
@@ -38,10 +44,17 @@
             <ul>
                 <li>{{ fecha }}</li>
                 <li>{{ fecha | date }}</li>
-                <li>{{ fecha | date: 'short'}}</li>
-                <li>{{ fecha | date: 'long'}}</li>
-                <li>{{ fecha | date: 'dd-MM-yyyy'}}</li>
-                <li>{{ fecha | date: 'MMMM dd, yyyy'}}</li>
+                <li>{{ fecha | date:'short'}}</li>
+                <li>{{ fecha | date:'long'}}</li>
+                <li>{{ fecha | date:'dd-MM-yyyy'}}</li>
+                <li>{{ fecha | date:'MMMM dd, yyyy'}}</li>
+            </ul>
+
+            <hr>
+            <ul>
+                <li>{{ fecha | date:'long':'GMT-6'}}</li>
+                <li>{{ fecha | date:'long':'GMT-4'}}</li>
+                <li>{{ fecha | date:'long':'':'fr'}}</li>
             </ul>
         </p-card>
     </div>

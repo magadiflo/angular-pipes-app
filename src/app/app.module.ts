@@ -10,9 +10,11 @@ import { VentasModule } from './ventas/ventas.module';
 
 //* Cambiar el locale de la app
 import localeEsPe from "@angular/common/locales/es-PE";
+import localeFr from "@angular/common/locales/fr";
 import { registerLocaleData } from "@angular/common";
 
 registerLocaleData(localeEsPe);
+registerLocaleData(localeFr); //*Usamos el 'fr' como tercer parámetro del pipe. Ejm: {{ fecha | date:'long':'':'fr' }}
 
 @NgModule({
   declarations: [
@@ -25,7 +27,7 @@ registerLocaleData(localeEsPe);
     VentasModule,
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'es-PE' }
+    { provide: LOCALE_ID, useValue: 'es-PE' } //* Para cambiar el idioma a toda la aplicación
   ],
   bootstrap: [AppComponent]
 })
