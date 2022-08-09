@@ -2,12 +2,18 @@
 <p>Pipes incluidos en Angular - Usualmente en el CommonModule.</p>
 <div class="grid">
     <div class="col">
-        <p-card header="Uppercase" [style]="{'border': '1px solid white'}"></p-card>
+        <p-card header="uppercase" [subheader]="nombreLower | uppercase" [style]="{'border': '1px solid white'}">
+            {{ nombreLower }} -> {{ nombreLower | uppercase }}
+        </p-card>
     </div>
     <div class="col">
-        2
+        <p-card header="lowercase" [subheader]="nombreUpper | lowercase" [style]="{'border': '1px solid white'}">
+            {{ nombreUpper }} -> {{ nombreUpper | lowercase }}
+        </p-card>
     </div>
     <div class="col">
-        3
+        <p-card header="titleCase" [subheader]="nombreFull | titlecase" [style]="{'border': '1px solid white'}">
+            {{ nombreFull }} -> {{ nombreFull | titlecase }}
+        </p-card>
     </div>
 </div>
