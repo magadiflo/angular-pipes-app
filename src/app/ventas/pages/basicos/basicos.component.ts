@@ -12,4 +12,6 @@ export class BasicosComponent {
   nombreUpper: string = 'MARTÍN';
   nombreFull: string = 'mArtín DÍAZ flores';  
 
+  fecha: Date = new Date();
+
 }
