@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+type Genero = 'femenino' | 'masculino';
 
 @Component({
   selector: 'app-no-comunes',
@@ -6,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class NoComunesComponent implements OnInit {
+export class NoComunesComponent {
 
-  constructor() { }
+  nombre: string = 'Martín';
+  genero: Genero = 'masculino';
 
-  ngOnInit(): void {
+  invitacionMap = {
+    'masculino': 'invitarlo',
+    'femenino': 'invitarla'
   }
 
 }
