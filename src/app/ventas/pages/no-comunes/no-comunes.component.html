@@ -15,4 +15,18 @@
                 aria-label="Borrar cliente" class="p-button-outlined p-button-danger"></button>
         </p-fieldset>
     </div>
+    <div class="col-12 md:col-6">
+        <p-fieldset legend="Slice pipe" [toggleable]="true">
+            <b>Original</b>
+            <pre>{{ clientes }}</pre>
+            <hr>
+            
+            <b>slice:0:2 -> desde la posición 0 hasta la 2 (excluyendo la 2)</b>
+            <pre>{{ clientes | slice:0:2 }}</pre>
+            
+            <b>slice:1:2</b>
+            <pre>{{ clientes | slice:1:2 }}</pre>
+
+        </p-fieldset>
+    </div>
 </div>
