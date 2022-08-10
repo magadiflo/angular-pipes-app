@@ -1,21 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  
-  nombre: string = 'martín díaz flores';
-  valor: number = 1000;
-  obj = {
-    nombre: 'Tinkler'
-  }
+export class AppComponent implements OnInit {
 
-  mostrarNombre(): void {
-    console.log(this.nombre);
-    console.log(this.valor);  
+  constructor(private primengConfig: PrimeNGConfig) { }
+
+  ngOnInit() {
+    //* Para darle animación de la burbujita al hacer click en los botones
+    this.primengConfig.ripple = true;
   }
 
 }

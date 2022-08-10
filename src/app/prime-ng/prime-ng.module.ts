@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { MenubarModule } from 'primeng/menubar';
+import { FieldsetModule } from 'primeng/fieldset';
 /**
  ** Este módulo (que agrupa los elementos de PrimeNg)
  ** únicamente lo usaremos para exportar los módulos de PrimeNg. 
@@ -20,6 +21,7 @@ import { MenubarModule } from 'primeng/menubar';
     ButtonModule,
     CardModule,
     MenubarModule,
+    FieldsetModule,
   ]
 })
 export class PrimeNgModule { }
