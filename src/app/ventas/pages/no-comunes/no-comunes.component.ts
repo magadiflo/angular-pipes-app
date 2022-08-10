@@ -43,4 +43,11 @@ export class NoComunesComponent {
     direccion: 'Perú'
   }
 
+  //* Json pipe
+  heroes = [
+    { nombre: 'Superman', vuela: true },
+    { nombre: 'Batman', vuela: false },
+    { nombre: 'Mujer Maravilla', vuela: false },
+  ];
+
 }
