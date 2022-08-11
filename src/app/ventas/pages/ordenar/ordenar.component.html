@@ -1,2 +1,6 @@
 <h1>Pipes personalizados</h1>
 <p>Pipes creados por {{ 'nosotros' | mayuscula }}</p>
+<p>Pipes creados por {{ 'nosotros' | mayuscula:isUpperCase }}</p>
+
+<button type="button" (click)="isUpperCase = !isUpperCase" pButton label="Toggle mayúscula" aria-label="Boton"
+    icon="pi pi-refresh" class="p-button-outlined p-button-help"></button>

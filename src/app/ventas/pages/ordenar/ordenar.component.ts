@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdenarComponent implements OnInit {
 
+  isUpperCase: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
