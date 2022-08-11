@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 
 type Genero = 'femenino' | 'masculino';
 
@@ -49,5 +50,13 @@ export class NoComunesComponent {
     { nombre: 'Batman', vuela: false },
     { nombre: 'Mujer Maravilla', vuela: false },
   ];
+
+  //* Async pipe
+  miObservable = interval(1000);
+  miPromesa = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Ahora sí ya hay promesa, se imprimió después de 3 segundos!');
+    }, 3000);
+  });
 
 }

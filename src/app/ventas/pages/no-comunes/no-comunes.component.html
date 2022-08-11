@@ -41,4 +41,18 @@
             </ul>
         </p-fieldset>
     </div>
+    <div class="col-12 md:col-6">
+        <p-fieldset legend="Async pipe" [toggleable]="true">
+            <p><b>miObservable | async</b>, el pipe <b>async</b> se subscribe internamente al observable
+                <b>miObservable</b> y cada una de sus emisiones es lo que se va a imprimir en pantalla.<br>
+                <b>NOTA:</b> cuando el componente se cierra (es destruido), el pipe async automáticamente hace el
+                unsubscribe para evitar posibles pérdidas de memoria.
+            </p>
+            <h1>{{ miObservable | async }}</h1>
+
+            <hr>
+            <h4 *ngIf="!(miPromesa | async)">Si no existe la promesa (Resolviendo promesa)....</h4>
+            <h1>{{ miPromesa | async }}</h1>
+        </p-fieldset>
+    </div>
 </div>
