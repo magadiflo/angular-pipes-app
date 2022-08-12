@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Proyecto subido a producción
 El proyecto fue subido al servicio de netlify: https://app.netlify.com/teams/magadiflo/overview
-Para ver el proyecto ejecutándose, ir a esta dirección (2021): https://vibrant-ardinghelli-504f4e.netlify.app
+Para ver el proyecto ejecutándose, ir a esta dirección: https://endearing-cupcake-cca9eb.netlify.app/
 
 ## [PrimeNG](https://primefaces.org/primeng/setup)
 "primeicons": "5.0.0"
