@@ -11,6 +11,7 @@ import { Color, Heroe } from '../../interfaces/ventas.interfaces';
 export class OrdenarComponent {
 
   isUpperCase: boolean = false;
+  orderBy: string = '';
   heroes: Heroe[] = [
     { name: 'Superman', flying: true, color: Color.blue },
     { name: 'Batman', flying: false, color: Color.black },
@@ -18,5 +19,9 @@ export class OrdenarComponent {
     { name: 'Daredevil', flying: false, color: Color.red },
     { name: 'Linterna Verde', flying: true, color: Color.green },
   ];
+
+  changeOrder(value: string) {
+    this.orderBy = value;
+  }
 
 }

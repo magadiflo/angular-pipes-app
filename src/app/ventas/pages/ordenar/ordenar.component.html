@@ -11,17 +11,17 @@
     <div class="p-toolbar-group-right">
         <button type="button" (click)="isUpperCase = !isUpperCase" pButton label="Toggle mayúscula" aria-label="Boton"
             icon="pi pi-refresh" class="mr-1 p-button-outlined p-button-help"></button>
-        <button type="button" pButton icon="pi pi-sort" label="Por nombre" aria-label="Botón" class="mr-1"></button>
-        <button type="button" pButton icon="pi pi-sort" label="Vuela" aria-label="Botón"
+        <button type="button" (click)="changeOrder('name')" pButton icon="pi pi-sort" label="Por nombre" aria-label="Botón" class="mr-1"></button>
+        <button type="button" (click)="changeOrder('flying')" pButton icon="pi pi-sort" label="Vuela" aria-label="Botón"
             class="mr-1 p-button-warning"></button>
-        <button type="button" pButton icon="pi pi-sort" label="Por color" aria-label="Botón"
+        <button type="button" (click)="changeOrder('color')" pButton icon="pi pi-sort" label="Por color" aria-label="Botón"
             class="mr-1 p-button-info"></button>
     </div>
 </p-toolbar>
 
 <div class="grid">
     <div class="col mt-2">
-        <p-table [value]="heroes | ordenar" responsiveLayout="scroll">
+        <p-table [value]="heroes | ordenar:orderBy" responsiveLayout="scroll">
             <ng-template pTemplate="header">
                 <tr>
                     <th>Name</th>
