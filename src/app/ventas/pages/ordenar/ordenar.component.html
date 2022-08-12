@@ -11,11 +11,12 @@
     <div class="p-toolbar-group-right">
         <button type="button" (click)="isUpperCase = !isUpperCase" pButton label="Toggle mayúscula" aria-label="Boton"
             icon="pi pi-refresh" class="mr-1 p-button-outlined p-button-help"></button>
-        <button type="button" (click)="changeOrder('name')" pButton icon="pi pi-sort" label="Por nombre" aria-label="Botón" class="mr-1"></button>
+        <button type="button" (click)="changeOrder('name')" pButton icon="pi pi-sort" label="Por nombre"
+            aria-label="Botón" class="mr-1"></button>
         <button type="button" (click)="changeOrder('flying')" pButton icon="pi pi-sort" label="Vuela" aria-label="Botón"
             class="mr-1 p-button-warning"></button>
-        <button type="button" (click)="changeOrder('color')" pButton icon="pi pi-sort" label="Por color" aria-label="Botón"
-            class="mr-1 p-button-info"></button>
+        <button type="button" (click)="changeOrder('color')" pButton icon="pi pi-sort" label="Por color"
+            aria-label="Botón" class="mr-1 p-button-info"></button>
     </div>
 </p-toolbar>
 
@@ -27,6 +28,35 @@
                     <th>Name</th>
                     <th>Flying</th>
                     <th>Color</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-heroe>
+                <tr>
+                    <td>{{ heroe.name }}</td>
+                    <td [innerHTML]="heroe.flying | vuela"></td>
+                    <td>{{ heroe.color }}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>
+<br>
+<p>
+    slice:0, es un pipe que vimos en los pipes no comunes, como le pasamos el argumento 0, nos devuelve otro arreglo
+    (copia) con todos los elementos. Esto, por que cuando le pasábamos defrente el arreglo héroes a esta otra tabla
+    la tabla de arriba también se movía. De esta forma, los cambios al ordenar solo afectan a la tabla de abajo
+</p>
+<div class="grid">
+    <div class="col mt-2">
+        <p-table [value]="heroes | slice:0" responsiveLayout="scroll">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th pSortableColumn="name">Name <p-sortIcon field="name"></p-sortIcon>
+                    </th>
+                    <th pSortableColumn="flying">Flying <p-sortIcon field="flying"></p-sortIcon>
+                    </th>
+                    <th pSortableColumn="color">Color <p-sortIcon field="color"></p-sortIcon>
+                    </th>
                 </tr>
             </ng-template>
             <ng-template pTemplate="body" let-heroe>
