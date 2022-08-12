@@ -32,7 +32,7 @@
             <ng-template pTemplate="body" let-heroe>
                 <tr>
                     <td>{{ heroe.name }}</td>
-                    <td>{{ heroe.flying }}</td>
+                    <td [innerHTML]="heroe.flying | vuela"></td>
                     <td>{{ heroe.color }}</td>
                 </tr>
             </ng-template>
