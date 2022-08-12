@@ -12,7 +12,7 @@
         <button type="button" (click)="isUpperCase = !isUpperCase" pButton label="Toggle mayúscula" aria-label="Boton"
             icon="pi pi-refresh" class="mr-1 p-button-outlined p-button-help"></button>
         <button type="button" pButton icon="pi pi-sort" label="Por nombre" aria-label="Botón" class="mr-1"></button>
-        <button type="button" pButton icon="pi pi-sort" label="Valores" aria-label="Botón"
+        <button type="button" pButton icon="pi pi-sort" label="Vuela" aria-label="Botón"
             class="mr-1 p-button-warning"></button>
         <button type="button" pButton icon="pi pi-sort" label="Por color" aria-label="Botón"
             class="mr-1 p-button-info"></button>
@@ -21,7 +21,7 @@
 
 <div class="grid">
     <div class="col mt-2">
-        <p-table [value]="heroes" responsiveLayout="scroll">
+        <p-table [value]="heroes | ordenar" responsiveLayout="scroll">
             <ng-template pTemplate="header">
                 <tr>
                     <th>Name</th>
